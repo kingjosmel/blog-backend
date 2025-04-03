@@ -14,7 +14,7 @@ export class CreateUsersDto {
     @MinLength(3)
     @MaxLength(20)
     @IsOptional()
-    lastName : string;
+    lastName? : string;
 
     @IsEmail({}, {
         message:
