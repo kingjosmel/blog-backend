@@ -1,7 +1,10 @@
 import { IsEmail, IsNotEmpty, IsOptional, IsString, Matches, MaxLength, MinLength } from "class-validator";
 
 export class CreateUsersDto {
-    @IsString()
+    @IsString({
+        message:
+        'firstName cannot contain numbers'
+    })
     @IsNotEmpty()
     @MinLength(3)
     @MaxLength(20)
@@ -13,7 +16,10 @@ export class CreateUsersDto {
     @IsOptional()
     lastName : string;
 
-    @IsEmail()
+    @IsEmail({}, {
+        message:
+        'email must be valid'
+    })
     @IsNotEmpty()
     email : string;
 
