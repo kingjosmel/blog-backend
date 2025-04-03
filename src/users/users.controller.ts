@@ -14,7 +14,7 @@ export class UsersController {
     }
 
     @Post()
-        public creatUsers(@Body(new ValidationPipe()) createUsersDto: CreateUsersDto) {
+        public creatUsers(@Body() createUsersDto: CreateUsersDto) {
         console.log(createUsersDto)
         return 'requested for post form the users endpoint'
 }
