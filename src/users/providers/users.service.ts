@@ -7,6 +7,7 @@ export class UserService {
     public findall (getUsersParamDto : GetUsersParamDto, limit : number, page : number){
         return [
             {
+                id: 123,
                 firstName : 'John',
                 email : 'john@doe.com'
             },
@@ -17,7 +18,7 @@ export class UserService {
         ]
     }
 
-    public findOneById () {
+    public findOneById (id : string) {
         return [
             {
                 id : 1234,
